@@ -1,0 +1,18 @@
+<div class="page fruitList">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="food in controller.fruit">
+            <td>{{food.name}}</td>
+            <td>{{food.description}}</td>
+            <td>
+                <div class="fruitcolor" style="background-color:rgb({{food.color}})"></div>
+            </td>
+            <td><a ui-sref="fruitEdit({id: {{food.id}}})">edit</a></td>
+        </tr>
+    </table>
+</div>

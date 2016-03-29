@@ -1,0 +1,20 @@
+﻿<div class="page fruitEdit" ng-if="controller.display">
+    <form method="put" ng-submit="controller.saveChanges()">
+        <input type="text" ng-model="controller.fruit.name" placeholder="{{controller.oldName}}" required />
+        <input type="text" ng-model="controller.fruit.description" placeholder="{{controller.OldDescription}}" required />
+        <div class="color red">
+            <input type="range" ng-model="controller.fruit.red" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="color green">
+            <input type="range" ng-model="controller.fruit.green" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="color blue">
+            <input type="range" ng-model="controller.fruit.blue" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="fruitcolor" style="background-color:rgb({{controller.fruit.color}})">
+        </div>
+        <input type="submit" value="Save Changes" />
+    </form>
+    <button id="delete" ng-click="controller.delFruit()">Detete Fruit</button>
+    <p ng-model="controller.message"></p>
+</div>

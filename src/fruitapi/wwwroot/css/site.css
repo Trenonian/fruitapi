@@ -1,0 +1,32 @@
+.fruitcolor {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
+}
+.fruitList th, .fruitList td {
+    padding: .5em;
+}
+
+.fruitList tr:nth-of-type(2n) {
+    background-color: #ddd;
+}
+
+.fruitEdit input[type=range], .fruitCreate input[type=range] {
+    width: 100px;
+}
+.color {
+    padding: .5em;
+    display: inline-block;
+    border-radius: .5em;
+    overflow: hidden;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}

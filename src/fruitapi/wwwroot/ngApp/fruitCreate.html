@@ -1,0 +1,19 @@
+﻿<div class="page fruitCreate">
+    <form method="put" ng-submit="controller.addFruit()">
+        <input type="text" ng-model="controller.fruit.name" placeholder="Name" required />
+        <input type="text" ng-model="controller.fruit.description" placeholder="Description" required />
+        <div class="color red">
+            <input type="range" ng-model="controller.fruit.red" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="color green">
+            <input type="range" ng-model="controller.fruit.green" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="color blue">
+            <input type="range" ng-model="controller.fruit.blue" ng-change="controller.updateColor()" min="0" max="255" required />
+        </div>
+        <div class="fruitcolor" style="background-color:rgb({{controller.fruit.color}})">
+        </div>
+            <input type="submit" value="Add Fruit" />
+    </form>
+    <p>{{controller.message}}</p>
+</div>
